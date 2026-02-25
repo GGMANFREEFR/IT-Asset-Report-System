@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <title>ระบบแจ้งงาน</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h3>ฟอร์มแจ้งงาน (แจ้ง Asset คอมพิวเตอร์)</h3>
+
+<div class="form-box">
+<form id="frmSReport"
+      method="post"
+      action="postReport.php">
+
+<!-- =====================
+     ข้อมูลผู้แจ้ง
+====================== -->
+<h4>ข้อมูลผู้แจ้ง</h4>
+<hr>
+
+<label>ชื่อผู้แจ้ง</label>
+<input type="text"
+       name="name"
+       placeholder="ชื่อผู้แจ้ง"
+       required
+       maxlength="100"
+       onblur="this.value=this.value.trim();">
+
+<!-- =====================
+     ข้อมูลทรัพย์สิน
+====================== -->
+<h4>ข้อมูลเครื่อง (Asset)</h4>
+<hr>
+
+<label>ชื่อเครื่อง</label>
+<input type="text"
+       name="asset_name"
+       placeholder="เช่น คอมพี่นัท 01"
+       required>
+
+<label>ประเภทอุปกรณ์</label>
+<select name="type" required>
+  <option value="">-- เลือกประเภท --</option>
+  <option value="Desktop">Desktop</option>
+  <option value="Notebook">Notebook</option>
+  <option value="Printer">Printer</option>
+  <option value="Other">อื่น ๆ</option>
+
+</select>
+
+<label>Serial Number</label>
+<input type="text"
+       name="SN"
+       placeholder="Serial Number"
+       required>
+
+<label>สถานที่ / ห้อง</label>
+<input type="text"
+       name="location"
+       placeholder="เช่น ห้องคอม 2 / อาคาร A  " 
+       required>
+
+<label>AnyDesk ID (ถ้ามี)</label>
+<input type="text"
+        name="anydesk_id"
+        placeholder="">
+
+<!-- =====================
+     รายละเอียดปัญหา
+====================== -->
+<h4>รายละเอียดการแจ้ง</h4>
+<hr>
+
+<label>รายละเอียดงาน</label>
+<textarea name="detail"
+          oninput="countChar(this)"></textarea>
+
+<small id="counter">0 ตัวอักษร</small>
+
+<!-- =====================
+     ปุ่มควบคุม
+====================== -->
+<div class="form-actions">
+  <input type="submit" value="แจ้งงาน">
+  <input type="reset"
+         value="ล้างข้อมูล"
+         class="btn-cancel"
+         onclick="return resetFormConfirm();">
+</div>
+
+</form>
+</div>
+
+<!-- =====================
+     JavaScript
+====================== -->
+<script>
+
+
+/* นับตัวอักษร */
+function countChar(el) {
+  document.getElementById("counter").innerText =
+    el.value.length + " ตัวอักษร";
+}
+
+/* reset ฟอร์ม */
+function resetFormConfirm() {
+  if (!confirm("ต้องการล้างข้อมูลทั้งหมดหรือไม่?")) {
+    return false;
+  }
+  document.getElementById("counter").innerText = "0 ตัวอักษร";
+  return true;
+}
+</script>
+
+</body>
+</html>

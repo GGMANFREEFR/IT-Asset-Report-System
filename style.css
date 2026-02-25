@@ -1,0 +1,165 @@
+body {
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    background: linear-gradient(135deg, #eef2f7, #dfe7f2);
+    margin: 0;
+    padding: 20px;
+  }
+  
+  /* หัวข้อ */
+  h2, h3 {
+    text-align: center;
+    color: #1f2d3d;
+    margin: 12px 0;
+    letter-spacing: 0.5px;
+  }
+  
+  /* ปุ่มเพิ่มข้อมูล */
+  .add-btn {
+    display: inline-block;
+    padding: 10px 24px;
+    background-color: #2563eb;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    margin: 15px 0 25px 0;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 10px rgba(37, 99, 235, 0.25);
+  }
+  
+  .add-btn:hover {
+    background-color: #1e40af;
+    transform: translateY(-1px);
+  }
+  
+  /* ตาราง */
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  }
+  
+  th {
+    background-color: #1e293b;
+    color: #ffffff;
+    padding: 12px;
+    font-weight: 600;
+  }
+  
+  td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #e5e7eb;
+  }
+  
+  tr:last-child td {
+    border-bottom: none;
+  }
+  
+  tr:hover {
+    background-color: #f1f5f9;
+  }
+  
+  /* ลิงก์แก้ไข / ลบ */
+  .action-edit {
+    color: #2563eb;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  
+  .action-edit:hover {
+    text-decoration: underline;
+  }
+  
+  .action-delete {
+    color: #dc2626;
+    font-weight: 600;
+    text-decoration: none;
+  }
+  
+  .action-delete:hover {
+    text-decoration: underline;
+  }
+  
+  /* ฟอร์ม */
+  .form-box {
+    max-width: 500px;
+    margin: auto;
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+  
+  label {
+    font-weight: 600;
+    color: #374151;
+  }
+  
+  input[type=text], select {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0 14px 0;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    box-sizing: border-box;
+    font-size: 14px;
+  }
+  
+  input[type=text]:focus {
+    outline: none;
+    border-color: #2563eb;
+    box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+  }
+  
+  /* ปุ่ม */
+  input[type=submit] {
+    width: 100%;
+    background-color: #2563eb;
+    color: white;
+    padding: 13px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    margin-top: 10px;
+  }
+  
+  input[type=submit]:hover {
+    background-color: #1e40af;
+  }
+  
+  input[type=reset] {
+    width: 100%;
+    background-color: #64748b;
+    color: white;
+    padding: 13px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 8px;
+  }
+   
+  input[type=reset]:hover {
+    background-color: #475569;
+  }
+  
+  
+  input[type=reseth] {
+    width: 100%;
+    background-color: #64748b;
+    color: white;
+    padding: 13px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 8px;
+  }
+  
+  input[type=reseth]:hover {
+    background-color: #475569;
+  }
+
